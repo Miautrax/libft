@@ -6,22 +6,21 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 16:01:22 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/17 17:44:48 by arivas-q         ###   ########.fr       */
+/*   Updated: 2024/09/18 16:54:08 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    char *p;
+	char	*p;
 
-    p = (char *)s;
-
-    while (n > 0)
-    {
-        *p = 0;
-        p++;
-        n--;
-    }
+	p = (char *)s;
+	while (n > 0)
+	{
+		*p = 0;
+		p++;
+		n--;
+	}
 }
