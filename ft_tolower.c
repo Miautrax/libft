@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:55:59 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/24 13:39:28 by arivas-q         ###   ########.fr       */
+/*   Created: 2024/09/24 13:58:56 by arivas-q          #+#    #+#             */
+/*   Updated: 2024/09/24 14:01:25 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char	*str)
+int	ft_tolower(int c)
 {
-	int	len;
-
-	len = 0;
-	while (str)
-		len++;
-	return (len);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	else
+		return (c);
 }

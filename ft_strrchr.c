@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:55:59 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/24 13:39:28 by arivas-q         ###   ########.fr       */
+/*   Created: 2024/09/24 14:19:57 by arivas-q          #+#    #+#             */
+/*   Updated: 2024/09/24 15:00:20 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char	*str)
+char	*strrchr(const char *s, int c)
 {
-	int	len;
+	char	*lastchr;
 
-	len = 0;
-	while (str)
-		len++;
-	return (len);
+	lastchr = 0;
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+			lastchr = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		return (char *)s;
+	return (lastchr);
 }

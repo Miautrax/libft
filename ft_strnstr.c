@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:55:59 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/24 13:39:28 by arivas-q         ###   ########.fr       */
+/*   Created: 2024/09/24 15:59:14 by arivas-q          #+#    #+#             */
+/*   Updated: 2024/09/24 16:22:44 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char	*str)
-{
-	int	len;
+#include <stddef.h>
 
-	len = 0;
-	while (str)
-		len++;
-	return (len);
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	
 }
