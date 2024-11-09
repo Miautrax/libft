@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:42:24 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/24 15:44:23 by arivas-q         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:38:49 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ char	*strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char 	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int 	ft_atoi(const char *str);
 
 #endif
