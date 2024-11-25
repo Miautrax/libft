@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 19:56:08 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 12:15:43 by arivas-q         ###   ########.fr       */
+/*   Created: 2024/11/20 11:13:16 by arivas-q          #+#    #+#             */
+/*   Updated: 2024/11/25 12:22:49 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h> //malloc//
-#include <string.h> //memset//
+#include "libft.h"
+#include <stddef.h>
 
-void *ft_calloc(size_t num, size_t size)
+char *ft_strdup(const char *s1)
 {
-	void	result;
-	
-	result = malloc(num * size);
-	if (result == NULL)
+	char *str;
+	size_t i;
+
+	if (!s1)
 		return (NULL);
-	else
+	str = (char*)malloc(sizeof(*s1)) * (ft_strlen(s1) + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s1[i])
 	{
-		ft_bzero(result, (num * size));
-		return (result);
+		str[i] = s1[i];
+		i++;
 	}
+	str[i] = 0;
+	return (str);
 }
