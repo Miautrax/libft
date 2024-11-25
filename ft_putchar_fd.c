@@ -6,7 +6,14 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:16:57 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/20 11:16:58 by arivas-q         ###   ########.fr       */
+/*   Updated: 2024/11/25 18:16:03 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void
+	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

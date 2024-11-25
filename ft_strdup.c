@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:13:16 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 12:22:49 by arivas-q         ###   ########.fr       */
+/*   Updated: 2024/11/25 17:27:29 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 char *ft_strdup(const char *s1)
 {
-	char *str;
-	size_t i;
+	char	*str;
+	size_t	i;
+	size_t	len1;
+
+	len1 = ft_strlen(s1);
 
 	if (!s1)
 		return (NULL);
-	str = (char*)malloc(sizeof(*s1)) * (ft_strlen(s1) + 1);
+	str = malloc(len1 + 1);
 	if (!str)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:24 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 12:11:32 by arivas-q         ###   ########.fr       */
+/*   Updated: 2024/11/25 17:05:33 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,18 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 	char	*str;
-
+	
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 	{
-		str = (char*)malloc(1);
+		str = malloc(1);
 		if (!str)
 			return (NULL);
 		str[0] = '\0';
 		return (str);
 	}
-
-	str = (char*)malloc(sizeof(*s) * (len + 1));
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	i = start;
