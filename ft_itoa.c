@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:16:54 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 11:57:23 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 13:13:07 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static size_t	get_n_count(int n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (n == 0)
 		i = 1;
@@ -31,11 +31,12 @@ static size_t	get_n_count(int n)
 	}
 	return (i);
 }
+
 static char	*itoa_body(char *str, char sign, int n)
 {
 	size_t	n_count;
 	size_t	i;
-	
+
 	n_count = get_n_count(n);
 	str = malloc (sizeof(char) * (n_count + 1));
 	if (!str)
@@ -56,11 +57,12 @@ static char	*itoa_body(char *str, char sign, int n)
 		str[0] = '-';
 	return (str);
 }
-char	*ft_itoa (int n)
+
+char	*ft_itoa(int n)
 {
 	char	*str;
 	char	sign;
-	
+
 	str = NULL;
 	sign = 1;
 	if (n == 0)

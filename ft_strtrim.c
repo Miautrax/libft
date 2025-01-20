@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:21 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 17:40:59 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 13:22:44 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@ char *ft_strstrim(char const *s)
     char    *str;
 
     if (!s)
-        return (NULL);
+		return (NULL);
     start = 0;
     while (s[start] && (s[start] == ' ' || s[start] == '\t' || s[start] == '\n'))
-        start++;
+		start++;
     if (s[start] == '\0')
-        return (ft_strdup(""));
+		return (ft_strdup(""));
     end = ft_strlen(s) - 1;
     while (end > start && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n'))
-        end--;
+		end--;
     len = end - start + 1;
     str = malloc(sizeof(char) * (len + 1));
     if (!str)
-        return (NULL);
+		return (NULL);
     ft_strlcpy(str, s + start, len + 1);
 
     return (str);

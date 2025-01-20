@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 14:19:57 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 12:18:11 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 13:21:42 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*strrchr(const char *s, int c)
 		s++;
 	}
 	if (c == '\0')
-		return (char *)s;
+		return ((char *)s);
 	return (lastchr);
 }
