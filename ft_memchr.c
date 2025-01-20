@@ -6,11 +6,12 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:25:27 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/24 15:36:38 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:57:40 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,12 +6,11 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 18:49:09 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/24 13:47:27 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:17:36 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stddef.h>
+#include "libft.h"
 
 size_t	strlcat(char *dest, const char *src, size_t size)
 {

@@ -6,12 +6,11 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:56:08 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 12:15:43 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:56:25 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h> //malloc//
-#include <string.h> //memset//
+#include "libft.h"
 
 void *ft_calloc(size_t num, size_t size)
 {

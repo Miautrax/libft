@@ -6,11 +6,11 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:49:07 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/18 16:43:21 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:15:16 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

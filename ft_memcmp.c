@@ -6,11 +6,11 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:44:33 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/24 15:51:48 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:14:55 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

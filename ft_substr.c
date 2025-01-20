@@ -6,12 +6,11 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:24 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 17:05:33 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:18:17 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {

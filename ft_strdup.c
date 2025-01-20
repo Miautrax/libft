@@ -6,12 +6,11 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:13:16 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 17:27:29 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:17:09 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 char *ft_strdup(const char *s1)
 {

@@ -6,11 +6,11 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 16:01:22 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/09/18 16:54:08 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:45:00 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

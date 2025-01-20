@@ -6,12 +6,17 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:42:24 by arivas-q          #+#    #+#             */
-/*   Updated: 2024/11/25 17:28:30 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:39:39 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef libft.h
-#define	libft.h
+#ifndef LIBFT_H
+#define	LIBFT_H
+#include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int number);
@@ -38,5 +43,13 @@ void	*ft_calloc(size_t num, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strstrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchet_fd(char c, int fc);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, )
 
 #endif
