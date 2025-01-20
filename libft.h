@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:42:24 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 11:39:39 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/20 13:32:11 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchet_fd(char c, int fc);
 void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, )
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
