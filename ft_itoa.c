@@ -6,69 +6,64 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:16:54 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 13:13:07 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:37:48 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	get_n_count(int n)
+static size_t	get_num_length(int n)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
+	len = 0;
 	if (n == 0)
-		i = 1;
+		len = 1;
 	if (n < 0)
 	{
-		n = n * -1;
-		i++;
+		n = -n;
+		len++;
 	}
 	while (n != 0)
 	{
-		a = a / 10;
-		i++;
+		n = n / 10;
+		len++;
 	}
-	return (i);
+	return (len);
 }
 
-static char	*itoa_body(char *str, char sign, int n)
+static char	*itoa_body(int n)
 {
-	size_t	n_count;
+	size_t	num_len;
 	size_t	i;
-
-	n_count = get_n_count(n);
-	str = malloc (sizeof(char) * (n_count + 1));
+	char	*str;
+	
+	num_len = get_num_length(n);
+	str = malloc(sizeof(char) * (num_len + 1));
 	if (!str)
-		return (0);
-	str[n_count] = '\0';
-	i = n_count - 1;
+		return (NULL);
+	str[num_len] = '\0';
+	i = num_len - 1;
 	if (n < 0)
 	{
-		sign = -1;
 		n = -n;
+		str[0] = '-';
 	}
+	if (n == 0)
+		str[i] = '0';
 	while (n > 0)
 	{
 		str[i--] = n % 10 + '0';
 		n = n / 10;
 	}
-	if (sign == -1)
-		str[0] = '-';
 	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	char	sign;
-
-	str = NULL;
-	sign = 1;
 	if (n == 0)
 		return (ft_strdup("0"));
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	str = itoa_body(str, sign, n);
-	return (str);
+	return (itoa_body(n));
 }

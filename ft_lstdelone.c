@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 08:15:45 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/27 09:08:23 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/29 15:32:29 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
-
-// NORMINETTE FAIL LINE 19??? pointer to function doesnt need *//

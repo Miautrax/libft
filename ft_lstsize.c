@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 08:16:02 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/27 09:24:54 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/29 16:10:50 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (lst != NULL)

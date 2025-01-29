@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:42:24 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/27 09:32:01 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/29 15:02:33 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 08:15:41 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/27 09:31:09 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/29 15:39:37 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst != NULL)
 	{
 		current = (*lst)->next;
-		(*del)((*list)->content);
-		free(*lst);
+		ft_lstdelone(*lst, (*del));
 		*lst = current;
 	}
 	*lst = NULL;

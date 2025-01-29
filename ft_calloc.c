@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:56:08 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 13:13:26 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/29 12:35:49 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	*ft_calloc(size_t num, size_t size)
 {
-	void	result;
+	void	*result;
 
+	if (num != 0 && size > SIZE_MAX / num)
+		return (NULL);
 	result = malloc(num * size);
 	if (result == NULL)
 		return (NULL);
