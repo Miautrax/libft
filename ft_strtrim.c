@@ -6,34 +6,35 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:21 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 13:22:44 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/30 12:39:11 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strstrim(char const *s)
+char *ft_strtrim(char const *s1, char const *set)
 {
-    size_t  start;
-    size_t  end;
-    size_t  len;
-    char    *str;
+	char	*trim_str;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 
-    if (!s)
-		return (NULL);
-    start = 0;
-    while (s[start] && (s[start] == ' ' || s[start] == '\t' || s[start] == '\n'))
+	if (!s1)
+		return (0);
+	if (!set)
+		return (ft_strdup(s1));
+	i = 0;
+	end = ft_strlen(s1);
+	start = 0;
+	while (s1[start] != '\0' && ft_strchr(set, s1[start]))
 		start++;
-    if (s[start] == '\0')
-		return (ft_strdup(""));
-    end = ft_strlen(s) - 1;
-    while (end > start && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n'))
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
-    len = end - start + 1;
-    str = malloc(sizeof(char) * (len + 1));
-    if (!str)
-		return (NULL);
-    ft_strlcpy(str, s + start, len + 1);
-
-    return (str);
+	trim_str = malloc(sizeof(char) * (end - start + 1));
+	if (!trim_str)
+		return (0);
+	while (start < end)
+		trim_str[i++] = s1[start++];
+	trim_str[i] = '\0';
+	return (trim_str);
 }

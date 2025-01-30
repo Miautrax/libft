@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:16 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 13:19:02 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/30 12:18:50 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	while (s1[i])
-	{
-		str[j] = s1[i];
-		i++;
-		j++;
-	}
+		str[j++] = s1[i++];
 	i = 0;
 	while (s2[i])
-	{
-		str[j] = s2[i];
-		i++;
-		j++;
-	}
+		str[j++] = s2[i++];
 	str[j] = 0;
 	return (str);
 }

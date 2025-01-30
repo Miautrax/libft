@@ -6,84 +6,93 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:09 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/27 10:05:00 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/30 11:42:04 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	word_count(char const *s, char c)
+static size_t	word_count(char const *s, char c)
 {
-	int		i;
-	int		count;
-	
+	size_t	i;
+	size_t	count;
+
+	count = 0;
+	i = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-int		ABC(char const *s, char c, int j)
+static size_t	word_len(const char *s, char c, size_t start)
 {
-	int		i;
+	size_t	len;
 
-	i = 0;
-	while(s[j])
+	len = 0;
+	while (s[start] && s[start] != c)
 	{
-		if(s[j] != c)
-		{
-			i++;
-			if(s[j + 1] == c)
-				return (i);
-		}
-		j++;
+		len++;
+		start++;
 	}
-	return (i);
+	return (len);
 }
 
-void	freestr (char **str)
+void	free_mem(char **str)
 {
-	int		i;
-	
+	size_t	i;
+
+	i = 0;
 	while (str[i])
 	{
 		free(str[i]);
 		i++;
 	}
-	free (str);
+	free(str);
+}
+
+char	**split_body(char const *s, char c, char **str)
+{
+	size_t	i;
+	size_t	j;
+	size_t	len;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+		{
+			len = word_len(s, c, i);
+			str[j] = ft_substr(s, i, len);
+			if (!str[j])
+			{
+				free_mem(str);
+				return (NULL);
+			}
+			j++;
+			i = i + len;
+		}
+	}
+	str[j] = NULL;
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	int		word_count;
-	int		i;
-	int		j;
-	int		n;
+	size_t	count;
 
-	word_count = 0;
-	i = 0;
-	word_count = word_count(s, c);
-	str = malloc(sizeof(char*) * (word_count + 1));
+	if (!s)
+		return (NULL);
+	count = word_count(s, c);
+	str = malloc(sizeof(char *) * (count + 1));
 	if (!str)
 		return (NULL);
-	while (s[i])
-	{
-		while(s[i] == c)
-			i++;
-		n = (s, c, i)
-		if(n > 0)
-		{
-			str[j] = ft_substr(s, i, n);
-			if (!str[j])
-				freestr(str);
-			j++;
-		}
-		i = i + n;
-	}
-	str[j] = NULL;
-	return (&*str);
+	return (split_body(s, c, str));
 }

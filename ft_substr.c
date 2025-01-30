@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:24 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/29 11:15:47 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/30 12:41:58 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		str[i] = s[i + start];
 		i++;
 	}
-	str[i] = '\0'
+	str[i] = '\0';
 	return (str);
 }
