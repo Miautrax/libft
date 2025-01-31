@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:49:07 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/31 10:19:25 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/31 10:30:53 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	if (n == 0)
 		return (dest);
-	while  (i < n)
+	while (i < n)
 	{
-		b[i] = a[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dest);
