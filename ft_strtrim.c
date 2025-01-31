@@ -6,13 +6,13 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:21 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/31 09:19:23 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/31 09:34:11 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim_str;
 	size_t	start;
