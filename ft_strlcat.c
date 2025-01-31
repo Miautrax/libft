@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 18:49:09 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/20 13:58:04 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/31 09:15:14 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	strlcat(char *dest, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	srclen = ft_strlen(src);
+	srclen = ft_strlen((char *)src);
 	destlen = ft_strlen(dest);
 	if (size <= destlen)
 		return (size + srclen);

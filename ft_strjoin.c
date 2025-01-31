@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:17:16 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/30 12:18:50 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/31 09:14:25 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	str = malloc(sizeof(char) * (ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
