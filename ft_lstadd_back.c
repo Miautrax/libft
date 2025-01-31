@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 08:15:35 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/27 08:57:44 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/31 09:23:04 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
-		
+
 	if (!lst || !new)
 		return ;
 	if (*lst == NULL)

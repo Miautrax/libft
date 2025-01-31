@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:16:54 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/29 14:37:48 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/31 09:22:29 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static char	*itoa_body(int n)
 	size_t	num_len;
 	size_t	i;
 	char	*str;
-	
+
 	num_len = get_num_length(n);
 	str = malloc(sizeof(char) * (num_len + 1));
 	if (!str)
