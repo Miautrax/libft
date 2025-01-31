@@ -6,7 +6,7 @@
 /*   By: arivas-q <arivas-q@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 08:15:56 by arivas-q          #+#    #+#             */
-/*   Updated: 2025/01/31 10:03:45 by arivas-q         ###   ########.fr       */
+/*   Updated: 2025/01/31 10:10:36 by arivas-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_content = f(lst->content);
 		if(!new_content)
 		{
-			ft_lstclear(new_list, del);
+			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
 		new_node = ft_lstnew(new_content);
